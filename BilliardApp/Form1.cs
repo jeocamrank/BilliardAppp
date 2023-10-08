@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-//Tung ngu bu dai
 
 namespace BilliardApp
 {
@@ -53,25 +52,6 @@ namespace BilliardApp
         }
         #endregion panelSlide
 
-        private Form activeForm = null;
-        public void openChildForm(Form childForm)
-        {
-            if(activeForm != null)
-            {
-                activeForm.Close();
-            }
-            activeForm = childForm;
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
-            lblTitle.Text = childForm.Text;
-            panelMain.Controls.Add(childForm);
-            panelMain.Tag = childForm;
-            childForm.BringToFront();
-            childForm.Show();
-        }
-
-
         private void btnDashboard_Click(object sender, EventArgs e)
         {
 
@@ -94,8 +74,7 @@ namespace BilliardApp
 
         private void btnTable_Click(object sender, EventArgs e)
         {
-            openChildForm(new Table());
-            hideSubMenu();
+
         }
 
         private void btnSessions_Click(object sender, EventArgs e)
