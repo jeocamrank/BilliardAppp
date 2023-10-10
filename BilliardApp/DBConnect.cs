@@ -12,7 +12,7 @@ namespace BilliardApp
         private string con;
         public string myConnection()
         {
-            con = @"Data Source=DESKTOP-FC6I5GK;Initial Catalog=BilliardApp;Integrated Security=True";
+            con = @"Data Source=DESKTOP-8EJEBRE;Initial Catalog=BilliardApp;Integrated Security=True";
             return con;
         }
     }

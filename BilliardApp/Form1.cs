@@ -24,6 +24,25 @@ namespace BilliardApp
             cn.Open();
         }
 
+        private Form activeForm = null;
+        public void openChildForm (Form childForm)
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            lblTitle.Text = childForm.Text;
+            panelMain.Controls.Add(childForm);
+            panelMain.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+
+        }
+
         #region panelSlide
         public void customizeDesing()
         {
@@ -64,11 +83,13 @@ namespace BilliardApp
 
         private void btnUserInfo_Click(object sender, EventArgs e)
         {
+            openChildForm(new userinfo());
             hideSubMenu();
         }
 
         private void btnUserAccount_Click(object sender, EventArgs e)
         {
+            openChildForm(new UserAccount());
             hideSubMenu();
         }
 
@@ -94,7 +115,14 @@ namespace BilliardApp
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-
+            DialogResult result = MessageBox.Show("Bạn có muốn đăng xuất?", "Xác nhận đăng xuất", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(result == DialogResult.Yes)
+            {
+                this.Hide();
+                login lg = new login();
+                lg.Show();
+                this.Close();
+            }
         }
     }
 }

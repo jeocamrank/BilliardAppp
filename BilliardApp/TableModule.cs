@@ -62,5 +62,10 @@ namespace BilliardApp
         {
             txtTableName.Clear();
         }
+
+        private void TableModule_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

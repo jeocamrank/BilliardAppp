@@ -34,6 +34,7 @@
             this.btnSessions = new System.Windows.Forms.Button();
             this.btnTable = new System.Windows.Forms.Button();
             this.panelSubUser = new System.Windows.Forms.Panel();
+            this.btnUserAccount = new System.Windows.Forms.Button();
             this.btnUserInfo = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnUser = new System.Windows.Forms.Button();
@@ -45,7 +46,6 @@
             this.panelTitle = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panelMain = new System.Windows.Forms.Panel();
-            this.btnUserAccount = new System.Windows.Forms.Button();
             this.panelSlide.SuspendLayout();
             this.panelSubUser.SuspendLayout();
             this.panelLogo.SuspendLayout();
@@ -144,6 +144,22 @@
             this.panelSubUser.Name = "panelSubUser";
             this.panelSubUser.Size = new System.Drawing.Size(200, 90);
             this.panelSubUser.TabIndex = 5;
+            // 
+            // btnUserAccount
+            // 
+            this.btnUserAccount.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnUserAccount.FlatAppearance.BorderSize = 0;
+            this.btnUserAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUserAccount.ForeColor = System.Drawing.Color.White;
+            this.btnUserAccount.Location = new System.Drawing.Point(0, 45);
+            this.btnUserAccount.Name = "btnUserAccount";
+            this.btnUserAccount.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnUserAccount.Size = new System.Drawing.Size(200, 45);
+            this.btnUserAccount.TabIndex = 5;
+            this.btnUserAccount.Text = "UserAccount";
+            this.btnUserAccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUserAccount.UseVisualStyleBackColor = true;
+            this.btnUserAccount.Click += new System.EventHandler(this.btnUserAccount_Click);
             // 
             // btnUserInfo
             // 
@@ -278,22 +294,6 @@
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(982, 613);
             this.panelMain.TabIndex = 2;
-            // 
-            // btnUserAccount
-            // 
-            this.btnUserAccount.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnUserAccount.FlatAppearance.BorderSize = 0;
-            this.btnUserAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUserAccount.ForeColor = System.Drawing.Color.White;
-            this.btnUserAccount.Location = new System.Drawing.Point(0, 45);
-            this.btnUserAccount.Name = "btnUserAccount";
-            this.btnUserAccount.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnUserAccount.Size = new System.Drawing.Size(200, 45);
-            this.btnUserAccount.TabIndex = 5;
-            this.btnUserAccount.Text = "UserAccount";
-            this.btnUserAccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUserAccount.UseVisualStyleBackColor = true;
-            this.btnUserAccount.Click += new System.EventHandler(this.btnUserAccount_Click);
             // 
             // Form1
             // 
